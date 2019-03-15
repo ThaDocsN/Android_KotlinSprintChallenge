@@ -3,7 +3,7 @@ package com.thadocizn.kotlinsprint
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class VideoDetails(
+data class VideoData(
     val name: String?,
     val short_description: String?,
     val credits: String?,
