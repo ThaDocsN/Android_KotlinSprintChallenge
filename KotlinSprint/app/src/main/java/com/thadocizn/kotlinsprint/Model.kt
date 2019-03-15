@@ -2,6 +2,8 @@ package com.thadocizn.kotlinsprint
 
 import kotlinx.serialization.Serializable
 
+const val GETVIDEO = 1
+
 @Serializable
 data class VideoData(
     val name: String?,
@@ -24,3 +26,7 @@ data class VideoFiles(
     val frame_rate: String?,
     val format: String?
 )
+
+fun VideoData.getVideo(): VideoFiles? {
+    return this.video_files?.get(GETVIDEO)
+}
